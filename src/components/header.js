@@ -3,10 +3,14 @@ import Box from "./box";
 import Text from "./text";
 import IconNotification from "../icons/notification";
 import IconSearch from "../icons/search";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
-  const { logout } = useAuth0();
+   const navigate = useNavigate();
+
+   const goToHome=()=>{
+    navigate("/");
+   }
   return (
     <Box className="h-[40px] flex justify-between">
       <Box>
@@ -28,7 +32,7 @@ export default function Header() {
         <button
          className="text-[#FFFFFF] w-[80px] h-[40px] bg-[#000000] rounded-lg"
           onClick={() =>
-            logout({ logoutParams: { returnTo: window.location.origin } })
+            goToHome()
           }
         >
           Log Out

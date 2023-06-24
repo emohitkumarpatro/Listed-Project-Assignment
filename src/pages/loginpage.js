@@ -86,7 +86,7 @@ export default function Loginpage() {
 
               <button
                 className="text-[#346BD4]"
-                onClick={() => loginWithRedirect()}
+                onClick={() => goToDashBoard()}
               >
                 Forgot password?
               </button>
@@ -101,7 +101,7 @@ export default function Loginpage() {
               <Text className="">Don’t have an account?</Text>
               <button
                 className="text-[#346BD4]"
-                onClick={() => loginWithRedirect()}
+                onClick={() => goToDashBoard()}
               >
                 Register here
               </button>
