@@ -4,7 +4,7 @@ import Text from "../components/text";
 import IconGoogle from "../icons/google";
 import IconApple from "../icons/apple";
 import Input from "../components/input";
-import { useAuth0 } from "@auth0/auth0-react";
+
 import { useNavigate } from "react-router-dom";
 
 export default function Loginpage() {
@@ -14,7 +14,6 @@ export default function Loginpage() {
     navigate("/dashboard");
   };
 
-  const { loginWithRedirect } = useAuth0();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -70,14 +69,14 @@ export default function Loginpage() {
           <Box className="block p-[5px] h-[360px]">
             <Box className="bg-[#FFFFFF] w-[400px] h-[300px] p-[30px] rounded-xl">
               <Input
-               placeholder="Enter Your Email Address"
+                placeholder="Enter Your Email Address"
                 label="Email address"
                 value={email}
                 onChange={handleEmailChange}
                 type="email"
               />
               <Input
-               placeholder="Enter Your Email Password"
+                placeholder="Enter Your Email Password"
                 label="Password"
                 value={password}
                 onChange={handlePasswordChange}
